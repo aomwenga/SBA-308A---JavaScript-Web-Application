@@ -99,3 +99,31 @@ async function searchCatByBreed() {
     console.error("Error fetching the cat images by breed:", error);
   }
 }
+
+// add event listener to the form that calls the addCat function when the form is submitted
+document.getElementById("cat-form").addEventListener("submit", addCat);
+
+// async function to add a cat name
+async function addCat(event) {
+  event.preventDefault(); // prevent the form from submitting in the default way
+  const catName = document.getElementById("cat-name").value; // get the cat name from the form input
+
+  try {
+    const response = await fetch("https://api.thecatapi.com/v1/cats", {
+      method: "POST", // use the POST method to send data
+      headers: {
+        "Content-Type": "application/json", // set the content type to JSON
+        "x-api-key":
+          "live_7JHK2hfszqskVylVAVpPIPRyPADDs6zzCDz1mNvlaD1H6wHVhnBVT4rNKXOiojoD", //  API key
+      },
+      body: JSON.stringify({ name: catName }), // json string
+    });
+    const data = await response.json(); // json response
+    console.log("Cat added:", data); // log the response data
+  } catch (error) {
+    // log any errors
+    console.error("Error adding the cat:", error);
+  }
+}
+
+// i can see the cat being added in the console log as an object, but not the value
