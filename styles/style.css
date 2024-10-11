@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+#dog-gallery {
+  margin-top: 20px;
+}
+#dog-gallery img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
