@@ -8,19 +8,30 @@
     <script defer src="./scripts/script.mjs"></script>
   </head>
   <body>
-    <h1>Random Cat Images</h1>
-    <div>
-      <label for="breed-select">Choose a breed:</label>
-      <select id="breed-select"></select>
-      <button id="search-cat">Search</button>
-    </div>
-    <div id="cat-gallery"></div>
-    <button id="new-cat">Get New Cat</button>
-    <div id="cat-gallery"></div>
-    <form id="cat-form">
-      <label for="cat-name">Cat Name:</label>
-      <input type="text" id="cat-name" name="cat-name" required />
-      <button type="submit">Add Cat</button>
-    </form>
+    <header>
+      <h1>Cat Image Gallery</h1>
+    </header>
+    <main>
+      <section id="breed-section">
+        <label for="breed-select">Choose a breed:</label>
+        <select id="breed-select"></select>
+        <button id="search-cat">Search</button>
+      </section>
+      <section id="gallery-section">
+        <div id="cat-gallery"></div>
+      </section>
+      <button id="new-cat">Get New Cat</button>
+      <section id="form-section">
+        <form id="cat-form">
+          <label for="cat-name">Cat Name:</label>
+          <input type="text" id="cat-name" name="cat-name" required />
+          <button type="submit">Add Cat</button>
+        </form>
+        <div id="feedback"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Cat Gallery</p>
+    </footer>
   </body>
 </html>

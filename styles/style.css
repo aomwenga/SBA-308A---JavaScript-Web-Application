@@ -1,19 +1,74 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  width: 100%;
   text-align: center;
-  margin: 20px;
+  padding: 1rem 0;
 }
-button {
-  padding: 10px 20px;
-  font-size: 16px;
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
 }
-#dog-gallery {
-  margin-top: 20px;
+
+#breed-section,
+#form-section {
+  margin-bottom: 2rem;
 }
-#dog-gallery img {
-  width: 300px;
+
+#cat-gallery img {
+  width: 100%;
+  max-width: 300px;
   height: auto;
   margin: 10px;
   border: 2px solid #ccc;
   border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+#feedback {
+  margin-top: 1rem;
+  color: #ff0000;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
 }
